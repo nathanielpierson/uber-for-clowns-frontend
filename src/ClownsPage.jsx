@@ -1,9 +1,9 @@
 import axios from "axios"
-import { ClownsIndex } from "./ClownsIndex"
 import { useEffect, useState } from "react"
+import { ClownsIndex } from "./ClownsIndex"
 
 export function ClownsPage() {
-  const [clowns, setClowns] = useState({});
+  const [clowns, setClowns] = useState([]);
 
   const handleIndex = () => {
     console.log("handleIndex");
@@ -13,7 +13,7 @@ export function ClownsPage() {
     });
   };
 
-  useEffect(handleIndex, {});
+  useEffect(handleIndex, []);
 
   return (
     <main>

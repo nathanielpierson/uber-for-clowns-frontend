@@ -1,7 +1,7 @@
 export function ClownsIndex({ clowns }) {
   return (
     <div>
-      <h1>RedNose Rides ({ clowns })</h1>
+      <h1>RedNose Rides</h1>
       {clowns.map((clown) => (
         <div key={clown.id}>
           <h2>{clown.name}</h2>
