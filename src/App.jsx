@@ -3,6 +3,7 @@ import axios from "axios";
 import { Header } from "./Header";
 import { RedNosePage } from "./RedNosePage";
 import { ClownsPage } from "./ClownsPage";
+import { BookingsPage } from "./BookingsPage";
 import { Footer } from "./Footer";
 import { LoginPage } from "./LoginPage";
 import { SignupPage } from "./SignupPage"
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "/logout",
         element: <LogoutLink/>
+      },
+      {
+        path: "/bookings",
+        element: <BookingsPage/>
       }
     ]
   }
@@ -48,7 +53,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <div>
+      <RouterProvider router={router} />
+    </div>
   )
 }
 
