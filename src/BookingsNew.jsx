@@ -4,7 +4,7 @@ export function BookingsNew () {
   const handleSubmit = (event) => {
 event.preventDefault();
 const params = new FormData(event.target)
-axios.post("http://localhost:3000/bookings.json", params).thwn(response => {
+axios.post("http://localhost:3000/bookings.json", params).then(response => {
   console.log(response.data)
   window.location.href = "/"
 })

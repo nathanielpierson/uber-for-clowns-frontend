@@ -37,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "/logout",
         element: <LogoutLink/>
+      },
+      {
+        path: "/bookings",
+        element: <BookingsPage/>
       }
     ]
   }
@@ -45,10 +49,6 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div>
-      <Header />
-      <ClownsPage />
-      <BookingsPage />
-      <Footer />
       <RouterProvider router={router} />
     </div>
   )
