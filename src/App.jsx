@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import axios from "axios";
 import { Header } from "./Header";
 import { ClownsPage } from "./ClownsPage";
+import { BookingsPage } from "./BookingsPage";
 import { Footer } from "./Footer";
 import { LoginPage } from "./LoginPage";
 import { SignupPage } from "./SignupPage"
@@ -43,7 +44,13 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <div>
+      <Header />
+      <ClownsPage />
+      <BookingsPage />
+      <Footer />
+      <RouterProvider router={router} />
+    </div>
   )
 }
 
