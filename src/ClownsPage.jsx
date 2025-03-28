@@ -1,9 +1,13 @@
 import axios from "axios"
-import { ClownsIndex } from "./ClownsIndex"
 import { useEffect, useState } from "react"
+import { ClownsIndex } from "./ClownsIndex"
+import { ClownsShow } from "./ClownsShow";
+import { Modal } from "./Modal";
 
 export function ClownsPage() {
-  const [clowns, setClowns] = useState({});
+  const [clowns, setClowns] = useState([]);
+  const [isClownsShowVisible, setIsClownsShowVisible] = useState(false);
+  const [currentClown, setCurrentClown] = useState({});
 
   const handleIndex = () => {
     console.log("handleIndex");
@@ -13,11 +17,20 @@ export function ClownsPage() {
     });
   };
 
-  useEffect(handleIndex, {});
+  const handleShow = (clown) => {
+    console.log("Handle Show", clown);
+    setIsClownsShowVisible(true);
+    setCurrentClown(clown);
+  }
+
+  useEffect(handleIndex, []);
 
   return (
     <main>
-      <ClownsIndex clowns={clowns}/>
+      <ClownsIndex clowns={clowns} onShow={handleShow} />
+      <Modal show={isClownsShowVisible} onClose={() => setIsClownsShowVisible(false)}>
+        <ClownsShow clown={currentClown} />
+      </Modal>
     </main>
   )
 }
