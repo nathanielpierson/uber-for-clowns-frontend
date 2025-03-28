@@ -29,7 +29,7 @@ export function SignupPage() {
           <li key={error}>{error}</li>
         ))}
       </ul>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>  
         <div>
           Name: <input name="name" type="text" />
         </div>
