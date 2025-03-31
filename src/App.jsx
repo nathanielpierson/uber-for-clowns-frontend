@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import axios from "axios";
 import { Header } from "./Header";
+import { RedNosePage } from "./RedNosePage";
 import { ClownsPage } from "./ClownsPage";
 import { BookingsPage } from "./BookingsPage";
 import { Footer } from "./Footer";
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
+        element: <RedNosePage/>
+      },
+      {
+        path: "/clowns",
         element: <ClownsPage/>
       },
       {
@@ -37,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "/logout",
         element: <LogoutLink/>
+      },
+      {
+        path: "/bookings",
+        element: <BookingsPage/>
       }
     ]
   }

@@ -1,7 +1,6 @@
 import axios from "axios";
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import {BookingsIndex} from "./BookingsIndex";
-import {BookingsShow} from "./BookingsShow";
 import {BookingsNew} from "./BookingsNew";
 
 export function BookingsPage() {
@@ -12,14 +11,15 @@ export function BookingsPage() {
       SetBookings(response.data);
     })
   }
+   const handleShow = (booking) => {
+       console.log("handleShow", booking);
+     };
+  useEffect(handleIndex, []);
   return (
     <div>
-      <BookingsIndex onClick={handleIndex} bookings={bookings}/>
+      <BookingsIndex onShow={handleShow} bookings={bookings}/>
       <div>
       <BookingsNew />
-      </div>
-      <div>
-      <BookingsShow />
       </div>
     </div>
   )
