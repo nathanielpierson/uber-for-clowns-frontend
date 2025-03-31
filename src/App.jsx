@@ -44,13 +44,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div>
-      <Header />
-      <ClownsPage />
-      <BookingsPage />
-      <Footer />
       <RouterProvider router={router} />
-    </div>
   )
 }
 

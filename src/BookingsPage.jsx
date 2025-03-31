@@ -4,7 +4,7 @@ import {BookingsIndex} from "./BookingsIndex";
 import {BookingsShow} from "./BookingsShow";
 import {BookingsNew} from "./BookingsNew";
 
-export function BookingsPage () {
+export function BookingsPage() {
 
   const [bookings, SetBookings] = useState([]);
   const handleIndex = () => {
