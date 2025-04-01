@@ -18,6 +18,7 @@ export function Header() {
           <a className="nav-link" href="/login">Sign-In</a>
         </li>
         <li className="nav-item">
+          <a className="nav-link" href="/bookings">Bookings</a>
           <LogoutLink />
         </li>
         <li className="nav-item">

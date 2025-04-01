@@ -8,6 +8,7 @@ import { Footer } from "./Footer";
 import { LoginPage } from "./LoginPage";
 import { SignupPage } from "./SignupPage"
 import { LogoutLink } from "./LogoutLink"
+import { BookingsNew } from "./BookingsNew";
 import { ClownsLoginPage } from "./ClownsLoginPage";
 import { ClownsSignupPage } from "./ClownsSignupPage";
 
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: "/bookings",
         element: <BookingsPage/>
+      },
+      {
+        path: "/bookings/new",
+        element: <BookingsNew/>
       },
       {
         path: "/clowns_signup",
