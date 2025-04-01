@@ -1,6 +1,6 @@
 import axios from "axios";
 import {useState, useEffect} from "react";
-import {BookingsIndex} from "./BookingsIndex";
+// import {BookingsIndex} from "./BookingsIndex";
 import {BookingsNew} from "./BookingsNew";
 
 export function BookingsPage () {
@@ -29,7 +29,7 @@ export function BookingsPage () {
   return (
     <div>
       <BookingsNew onCreate={handleCreate}/>
-      <BookingsIndex onShow={handleShow} bookings={bookings}/>
+      {/* <BookingsIndex onShow={handleShow} bookings={bookings}/> */}
     </div>
   )
   }
