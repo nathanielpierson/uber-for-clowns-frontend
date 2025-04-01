@@ -31,7 +31,7 @@ export function ClownsSignupPage() {
       </ul>
       <form onSubmit={handleSubmit}>  
         <div>
-          Name: <input name="username" type="text" />
+          Name: <input name="name" type="text" />
         </div>
         <div>
           Email: <input name="email" type="email" />
@@ -40,7 +40,13 @@ export function ClownsSignupPage() {
           Password: <input name="password" type="password" />
         </div>
         <div>
-          Password confirmation: <input name="password_confirmation" type="password" />
+          Password Confirmation: <input name="password_confirmation" type="password" />
+        </div>
+        <div>
+          What is your Specialty?: <input name="specialty" type="text" />
+        </div>
+        <div>
+          What is your Rate?: <input name="rates" type="text" />
         </div>
         <button type="submit">Signup</button>
       </form>
