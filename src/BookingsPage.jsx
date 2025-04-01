@@ -15,12 +15,21 @@ export function BookingsPage() {
        console.log("handleShow", booking);
      };
   useEffect(handleIndex, []);
+
+  const handleCreate = (params, successCallback) => {
+    console.log("handleCreate")
+    axios.post("/bookings.json", params).then((response) => {
+      SetBookings([...bookings, response.data]);
+      successCallback();
+      console.log(response.data)
+
+    })
+  }
+  
   return (
     <div>
+      <BookingsNew onCreate={handleCreate}/>
       <BookingsIndex onShow={handleShow} bookings={bookings}/>
-      <div>
-      <BookingsNew />
-      </div>
     </div>
   )
   }
