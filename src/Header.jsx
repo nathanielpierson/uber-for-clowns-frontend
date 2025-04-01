@@ -22,7 +22,6 @@ export function Header() {
           <LogoutLink />
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/bookings">Bookings</a>
           <a className="nav-link" href="/clowns_signup">Clown Signup</a>
         </li>
         <li className="nav-item">

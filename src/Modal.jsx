@@ -1,4 +1,5 @@
 import "./Modal.css";
+// import { BookingsNew } from "./BookingsNew";
 
 export function Modal({ children, show, onClose }) {
   if(show) {
