@@ -1,3 +1,5 @@
+import { LogoutLink } from "./LogoutLink";
+
 export function Header() {
   return (
 
@@ -13,13 +15,18 @@ export function Header() {
           <a className="nav-link" href="/signup">Register</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/login">Signin</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="/">Make a Request</a>
+          <a className="nav-link" href="/login">Sign-In</a>
         </li>
         <li className="nav-item">
           <a className="nav-link" href="/bookings">Bookings</a>
+          <LogoutLink />
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="/bookings">Bookings</a>
+          <a className="nav-link" href="/clowns_signup">Clown Signup</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="/clowns_login">Clown Login</a>
         </li>
       </ul>
     </header>

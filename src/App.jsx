@@ -8,6 +8,9 @@ import { Footer } from "./Footer";
 import { LoginPage } from "./LoginPage";
 import { SignupPage } from "./SignupPage"
 import { LogoutLink } from "./LogoutLink"
+import { BookingsNew } from "./BookingsNew";
+import { ClownsLoginPage } from "./ClownsLoginPage";
+import { ClownsSignupPage } from "./ClownsSignupPage";
 
 
 axios.defaults.baseURL = "http://localhost:3000";
@@ -46,6 +49,18 @@ const router = createBrowserRouter([
       {
         path: "/bookings",
         element: <BookingsPage/>
+      },
+      {
+        path: "/bookings/new",
+        element: <BookingsNew/>
+      },
+      {
+        path: "/clowns_signup",
+        element: <ClownsSignupPage />
+      },
+      {
+        path: "/clowns_login",
+        element: <ClownsLoginPage />
       }
     ]
   }
@@ -53,9 +68,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div>
       <RouterProvider router={router} />
-    </div>
   )
 }
 

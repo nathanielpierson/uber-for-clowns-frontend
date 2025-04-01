@@ -9,8 +9,9 @@ export function Modal({ children, show, onClose }) {
           <button className="close" type="button" onClick={onClose}>
             &#x2715;
           </button>
+          <button type="button" className="btn btn-light"> <a href="/bookings/new">Request this Clown</a></button>
         </section>
-      </div>
+      </div> 
     )
   }
 }
