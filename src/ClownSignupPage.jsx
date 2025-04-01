@@ -9,7 +9,7 @@ export function SignupPage() {
     setErrors([]);
     const params = new FormData(event.target);
     axios
-      .post("http://localhost:3000/users.json", params)
+      .post("http://localhost:3000/clowns.json", params)
       .then((response) => {
         console.log(response.data);
         event.target.reset();
@@ -23,7 +23,7 @@ export function SignupPage() {
 
   return (
     <div id="signup">
-      <h1>Signup</h1>
+      <h1>Clown Signup</h1>
       <ul>
         {errors.map((error) => (
           <li key={error}>{error}</li>
@@ -31,7 +31,7 @@ export function SignupPage() {
       </ul>
       <form onSubmit={handleSubmit}>  
         <div>
-          Name: <input name="username" type="text" />
+          Name: <input name="name" type="text" />
         </div>
         <div>
           Email: <input name="email" type="email" />

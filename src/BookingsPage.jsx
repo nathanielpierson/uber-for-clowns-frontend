@@ -3,7 +3,7 @@ import {useState, useEffect} from "react";
 import {BookingsIndex} from "./BookingsIndex";
 import {BookingsNew} from "./BookingsNew";
 
-export function BookingsPage () {
+export function BookingsPage() {
 
   const [bookings, SetBookings] = useState([]);
   const handleIndex = () => {
