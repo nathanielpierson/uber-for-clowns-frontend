@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 
-export function SignupPage() {
+export function ClownsSignupPage() {
   const [errors, setErrors] = useState([]);
 
   const handleSubmit = (event) => {
@@ -9,7 +9,7 @@ export function SignupPage() {
     setErrors([]);
     const params = new FormData(event.target);
     axios
-      .post("http://localhost:3000/users.json", params)
+      .post("http://localhost:3000/clowns.json", params)
       .then((response) => {
         console.log(response.data);
         event.target.reset();
