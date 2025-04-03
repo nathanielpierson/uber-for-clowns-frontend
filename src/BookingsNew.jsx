@@ -1,6 +1,7 @@
 import { Rating, StickerStar, Heart } from '@smastrom/react-rating';
 import { useState, useEffect } from 'react';
 import axios from 'axios'
+import { Map, Marker } from "pigeon-maps"
 
 export function BookingsNew ({onCreate}) {
   const [rating, setRating] = useState(0) // Initial value
@@ -30,7 +31,7 @@ export function BookingsNew ({onCreate}) {
     inactiveFillColor: '#cc93c8'
   }
 
-  
+  const [mapData, setMapData] = useState([37.7749, -122.4194])
     // send data to rails
     // send id rather than name
     // make dynamic from rails db data
@@ -59,6 +60,19 @@ export function BookingsNew ({onCreate}) {
         </p>
         <Rating itemStyles={myStyles} style={{ maxWidth: 250 }} value={rating} onChange={setRating} halfFillMode="box" orientation={'horizontal'} />
         <button type="submit">Create</button>
+        <Map height={300} defaultCenter={mapData} defaultZoom={11}>
+          <Marker width={50} anchor={mapData} />
+          {/* <Marker width={50} anchor={[37.7749, -122.458]} /> */}
+          <img src='/clown.png' width={500} height={158} alt='' />
+          <Marker 
+            width={50}
+            anchor={[37.7749, -122.458]} 
+            color={'red'} 
+            onClick={() => setMapData([31.7619, -106.4850])} 
+          />
+        </Map>     
+        
+        {/* <Button /> */}
       </form>
     </div>
 )
