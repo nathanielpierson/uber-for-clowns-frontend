@@ -11,6 +11,7 @@ import { LogoutLink } from "./LogoutLink"
 import { BookingsNew } from "./BookingsNew";
 import { ClownsLoginPage } from "./ClownsLoginPage";
 import { ClownsSignupPage } from "./ClownsSignupPage";
+import { Rating } from '@smastrom/react-rating';
 
 
 axios.defaults.baseURL = "http://localhost:3000";
