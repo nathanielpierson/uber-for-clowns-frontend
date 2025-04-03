@@ -33,7 +33,7 @@ export function BookingsNew ({onCreate}) {
   
     // send data to rails
     // send id rather than name
-  // make dynamic from rails db data
+    // make dynamic from rails db data
 
 
   return (
@@ -52,8 +52,7 @@ export function BookingsNew ({onCreate}) {
         <p>
           {/* clown id <input name="clown_id" type="text" /> */}
         </p>
-        <p> user id <input name="user_id" type="text" />
-        </p>
+        
         <p> duration <input name="duration" type="text"/>
         </p>
         <p> <input name="rating" type="text" value={rating}   />
