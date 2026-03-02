@@ -22,6 +22,10 @@ const form = event.target;
   </p>
   <p> rating <input name="rating" type="text"/>
   </p>
+  <p> arrival time <input name="departure_time" type="text" />
+  </p>
+  <p> departure time <input name="departure_time" type="text" />
+  </p>
   <button type="submit">Create</button>
 </form>
 </div>
